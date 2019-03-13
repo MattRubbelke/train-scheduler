@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Catch that Train!</h1>
+            <p class="lead">Use the schedule below to never miss your train again.</p>
+        </div>
+    </div>
+    <div id="content">
+        <div id="current-train">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Current Train Schedule</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="row-head">
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" id="train-name-display"></th>
+                        <th scope="col" id="destination-display"></th>
+                        <th scope="col" id="frequency-display"></th>
+                        <th scope="col" id="arrival-display"></th>
+                        <th scope="col" id="minutes-display"></th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="add-train">
+            <form>
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Add Train</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="col">
+                            <div class="form-group" id="train-form"> 
+                                <label for="addTrain">Train Name</label>
+                                <input type="text" class="form-control" id="train-input">
+                                <label for="addTrain">Destination</label>
+                                <input type="text" class="form-control" id="destination">
+                                <label for="addTrain">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="first-time">
+                                <label for="addTrain">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                                <button id="add-train-submit" type="submit" class="btn btn-info">Submit</button>
+                            </div>
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+    <!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- JQuery Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Moment Link -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Javascript File Link -->
+    <script type="text/javascript" src="assets/javascript.js"></script>
+</body>
+</html>

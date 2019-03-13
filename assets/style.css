@@ -1,0 +1,26 @@
+.jumbotron{
+    text-align: center;
+}
+
+#content{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+label{
+    margin: 10px 0px;
+}
+
+button{
+    margin-top: 15px;
+}
+
+#add-train{
+    border: 1px solid lightgray;
+    margin-bottom: 100px; 
+}
+
+#current-train{
+    border: 1px solid lightgray;
+    margin-bottom: 20px; 
+}
